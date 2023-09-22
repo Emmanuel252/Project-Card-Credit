@@ -37,9 +37,9 @@ body {
   border: none;
 }
 .left {
-  width: 35%;
+  width: 30%;
   height: 100vh;
-  background: var(--gradientColor);
+  background-image: url(/interactive-card-details-form-main/images/bg-main-desktop.png);
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -66,4 +66,56 @@ body {
   max-width: 75%;
   border-radius: 0.8rem;
   background-color: var(--lightGrV);
+}
+.containerForm {
+  /* background-color: red; */
+  min-width: 30%;
+  display: flex;
+  align-items: center;
+  margin: auto;
+  padding: 0 30rem;
+}
+.containForm {
+  padding-bottom: 1.5rem;
+}
+.containForm .modality {
+  display: flex;
+  overflow-x: hidden;
+  white-space: nowrap;
+}
+.containForm label {
+  color: var(--darkGrV);
+}
+.containForm .inputForm {
+  min-height: 4rem;
+  width: 100%;
+  outline: none;
+  border: 1px solid var(--verDaV);
+  border-radius: 0.4em;
+}
+.containerForm .months {
+  width: 20%;
+  min-height: 4rem;
+  border-radius: 0.8rem;
+  border: 1px solid var(--verDaV);
+  margin-right: 2rem;
+}
+.containerForm .years {
+  width: 20%;
+  min-height: 4rem;
+  border-radius: 0.8rem;
+  border: 1px solid var(--verDaV);
+  margin-right: 2rem;
+}
+.containerForm .cvc {
+  width: 50%;
+  min-height: 4rem;
+  border-radius: 0.8rem;
+  border: 1px solid var(--verDaV);
+}
+.inputModality {
+}
+.btn {
+  width: 100%;
+  height: 4rem;
 }

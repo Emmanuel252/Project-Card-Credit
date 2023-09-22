@@ -13,7 +13,27 @@
         <div class="cardPile"></div>
       </div>
       <div class="right">
-        <form action=""><p>Viva</p></form>
+        <div class="containerForm">
+          <form action="">
+            <div class="containForm">
+              <label for="">CARDHOLDER NAME </label><br />
+              <input type="text" class="inputForm" required />
+            </div>
+            <div class="containForm">
+              <label for="">CARD NUMBER</label><br />
+              <input type="text" class="inputForm" required />
+            </div>
+            <div class="containForm">
+              <label for="">EXP DATE (MM/YY) </label><br />
+              <div class="modality">
+                <input type="text" class="months inputModality" required />
+                <input type="text" class="years inputModality" required />
+                <input type="text" class="cvc inputModality" required />
+              </div>
+            </div>
+            <button class="btn">Confirm</button>
+          </form>
+        </div>
       </div>
     </div>
     <script src="script.js"></script>
