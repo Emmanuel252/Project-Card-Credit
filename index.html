@@ -17,21 +17,35 @@
           <form action="">
             <div class="containForm">
               <label for="">CARDHOLDER NAME </label><br />
-              <input type="text" class="inputForm" required />
+              <div class="bloc">
+                <input type="text" class="inputForm" required />
+              </div>
             </div>
             <div class="containForm">
               <label for="">CARD NUMBER</label><br />
-              <input type="text" class="inputForm" required />
-            </div>
-            <div class="containForm">
-              <label for="">EXP DATE (MM/YY) </label><br />
-              <div class="modality">
-                <input type="text" class="months inputModality" required />
-                <input type="text" class="years inputModality" required />
-                <input type="text" class="cvc inputModality" required />
+              <div class="bloc">
+                <input type="text" class="inputForm" required />
               </div>
             </div>
-            <button class="btn">Confirm</button>
+            <div class="containForm">
+              <div class="bloc three">
+                <span class="number1">
+                  <label for="">EXP. DATE (MM/YY)</label><br />
+                  <input type="number" class="days inputForm" required />
+                  <input type="number" class="years inputForm" required />
+                </span>
+                <span class="number2">
+                  <label for="">CVC</label><br />
+                  <input type="number" class="cvc inputForm" required />
+                </span>
+              </div>
+            </div>
+            <div class="containForm">
+              <div class="bloc">
+                <button class="btn">Confirm</button>
+              </div>
+            </div>
+            <div />
           </form>
         </div>
       </div>
