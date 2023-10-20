@@ -25,7 +25,7 @@
 }
 html {
   font-size: 62.5%;
-  /* 62.5% === 10px donc 1rem = 10px , 16px = 1.6rem */
+  /* 62.5% === 10px dnc 1rem = 10px , 16px = 1.6rem */
   overflow: hidden;
 }
 body {
@@ -42,6 +42,52 @@ body {
   background: url(./interactive-card-details-form-main/images/bg-main-mobile.png)
     center/cover;
   height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2.5rem;
+}
+.card_block {
+  margin-left: 70%;
+  position: relative;
+}
+.card_block:nth-child(2) {
+  margin-left: 100%;
+}
+.card_block > img {
+  max-width: 35rem;
+}
+.card_block input {
+  border: none;
+  outline: none;
+  background: none;
+  font-family: var(--font);
+  color: var(--white);
+}
+svg {
+  position: absolute;
+  top: 1.5rem;
+  left: 2rem;
+}
+.card_block-inFront {
+  position: absolute;
+  top: 10rem;
+  left: 2rem;
+  font-size: 2.5rem;
+}
+.card_block-infos {
+  position: absolute;
+  bottom: 2rem;
+  padding: 0 0.5rem 0 0.5em;
+}
+.card_block-infos_inFrontDate {
+  text-align: right;
+}
+.card_block-back {
+  position: absolute;
+  top: 8.5rem;
+  left: 28rem;
 }
 
 .information {
@@ -57,6 +103,22 @@ body {
   }
   .card {
     width: 100%;
-    height: 80vh;
+    height: 35vh;
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: center;
+    gap: 0rem;
+    padding-top: 15rem;
+  }
+  .card_block:nth-child(1) {
+    margin-left: -10%;
+    position: relative;
+    bottom: 8.5rem;
+  }
+  .card_block:nth-child(2) {
+    margin-left: 10%;
+  }
+  .card_block-face {
+    z-index: 1000;
   }
 }
