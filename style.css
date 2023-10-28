@@ -34,7 +34,7 @@ body {
 }
 .project {
   width: 100%;
-  height: 100vh;
+  min-height: 200vh;
   display: flex;
 }
 .card {
@@ -56,7 +56,7 @@ body {
   margin-left: 100%;
 }
 .card_block > img {
-  max-width: 35rem;
+  width: 35rem;
 }
 .card_block input {
   border: none;
@@ -79,10 +79,19 @@ svg {
 .card_block-infos {
   position: absolute;
   bottom: 2rem;
-  padding: 0 0.5rem 0 0.5em;
+  left: 1.5rem;
+  width: 30rem;
+  height: 1rem;
+  /* background-color: red; */
+  display: flex;
+  justify-content: space-between;
 }
 .card_block-infos_inFrontDate {
+  font-size: 1rem;
   text-align: right;
+}
+.card_block-infos_inFrontName {
+  font-size: 1rem;
 }
 .card_block-back {
   position: absolute;
@@ -95,30 +104,203 @@ svg {
   height: 100vh;
 }
 
+.information_block {
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  margin-left: 10%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+}
+.information_block-infos {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.information_block-infos > input {
+  width: 30rem;
+  height: 3.5rem;
+  border-radius: 6px;
+  border: 1px solid var(--verDaV);
+  font-family: var(--font);
+  padding: 2rem 1.5rem 2rem 1.5rem;
+  font-weight: bold;
+  font-size: 1.5rem;
+  outline: none;
+}
+input:focus {
+  border: 0.8px solid rgb(48, 3, 3);
+}
+.information_block-infos > input::placeholder {
+  opacity: 0.4;
+}
+
+.information_block-infos > label {
+  font-weight: 700;
+  color: var(--verDaV);
+  font-size: 1rem;
+  letter-spacing: 0.1rem;
+}
+.information_block-infos_details {
+  width: 30rem;
+}
+.information_block-infos_details .time {
+  display: flex;
+  font-weight: 700;
+  color: var(--verDaV);
+  font-size: 1rem;
+  gap: 2rem;
+  padding-bottom: 0.6rem;
+}
+.information_block-infos_details .infos_time {
+  display: flex;
+  gap: 1rem;
+}
+.information_block-infos_details .time > label {
+  font-weight: 700;
+  color: var(--verDaV);
+  font-size: 1rem;
+  letter-spacing: 0.1rem;
+  width: 50%;
+}
+.information_block-infos_details .infos_time > input {
+  height: 3.5rem;
+  border-radius: 6px;
+  border: 1px solid var(--verDaV);
+  font-family: var(--font);
+  padding: 2rem 1.5rem 2rem 1.5rem;
+  font-weight: bold;
+  font-size: 1.5rem;
+  outline: none;
+}
+.information_block-infos_details .infos_time > input::placeholder {
+  opacity: 0.4;
+}
+div > .c_months {
+  width: 25%;
+}
+div > .c_years {
+  width: 25%;
+}
+div > .c_cvc {
+  width: 50%;
+}
+.information_block-infos_details > input {
+  height: 3.5rem;
+  border-radius: 6px;
+  border: 1px solid var(--verDaV);
+  font-family: var(--font);
+  padding: 2rem 1.5rem 2rem 1.5rem;
+}
+
+.information_block-infos > button {
+  width: 30rem;
+  height: 4.5rem;
+  border-radius: 6px;
+  background-color: var(--verDaV);
+  font-family: var(--font);
+  color: var(--white);
+  font-size: 1.5rem;
+  box-shadow: 0px 0px 5px var(--darkGrV);
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 1200px) {
+  .card_block > img {
+    max-width: 28rem;
+  }
+
+  .card_block-inFront {
+    font-size: 2rem;
+    top: 8rem;
+    left: 1.5rem;
+  }
+  .card_block-back {
+    position: absolute;
+    top: 6.7rem;
+    left: 22rem;
+  }
+  .card_block-infos {
+    bottom: 1.5rem;
+    padding: 0 0rem 0 1rem;
+  }
+  .card_block-infos {
+    width: 24rem;
+    left: 0.4rem;
+  }
+
+  .card_block-infos > input {
+    font-size: 1rem;
+  }
+  .card_block-infos_inFrontDate {
+    text-align: right;
+    font-size: 1rem;
+  }
+  .card_block-infos_inFrontName {
+    font-size: 1rem;
+  }
+  .information_block-infos > input {
+    width: 27rem;
+    height: 2rem;
+    padding: 1.8rem 1.5rem 1.8rem 1.5rem;
+  }
+  .information_block-infos_details {
+    width: 27rem;
+  }
+  .information_block-infos > button {
+    width: 27rem;
+    height: 4rem;
+    /* padding: 2rem 1.5rem 2rem 2rem; */
+  }
+}
+
 @media screen and (max-width: 768px) {
   .project {
     display: flex;
     flex-direction: column;
-    background-color: red;
+    min-height: 100vh;
   }
   .card {
     width: 100%;
-    height: 35vh;
+    height: 30vh;
     display: flex;
     flex-direction: column-reverse;
     justify-content: center;
     gap: 0rem;
-    padding-top: 15rem;
+    padding-top: 18rem;
   }
+
   .card_block:nth-child(1) {
     margin-left: -10%;
     position: relative;
-    bottom: 8.5rem;
+    bottom: 7rem;
   }
   .card_block:nth-child(2) {
     margin-left: 10%;
   }
   .card_block-face {
     z-index: 1000;
+  }
+  .information_block {
+    margin-left: 25%;
+    margin-top: -5rem;
+  }
+  .information_block-infos > input {
+    width: 30rem;
+    height: 3.5rem;
+  }
+  .information_block-infos_details {
+    width: 30rem;
+  }
+  .information_block-infos > button {
+    width: 30rem;
+    height: 4.5rem;
   }
 }
