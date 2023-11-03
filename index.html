@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
     <title>Document</title>
   </head>
   <body>
@@ -15,10 +16,10 @@
             alt=""
           />
           <svg width="84" height="47" fill="none" xmlns="http://www.w3.org/2000/svg"><ellipse cx="23.478" cy="23.5" rx="23.478" ry="23.5" fill="#fff"/><path d="M83.5 23.5c0 5.565-4.507 10.075-10.065 10.075-5.559 0-10.065-4.51-10.065-10.075 0-5.565 4.506-10.075 10.065-10.075 5.558 0 10.065 4.51 10.065 10.075Z" stroke="#fff"/></svg>
-          <input type="text" value="0000  0000  0000  0000" class="card_block-inFront" readonly/>
+          <input type="text" value="0000 0000 0000 0000" class="card_block-inFront" id="numCardFace" readonly/>
           <div class="card_block-infos">
-            <input type="text" value="JANE APPLESEED" class="card_block-infos_inFrontName" readonly/>
-            <input type="text" value="00/00" class="card_block-infos_inFrontDate" readonly/>
+            <input type="text" value="JANE APPLESEED" class="card_block-infos_inFrontName" id="nameCardFace" readonly/>
+            <input type="text" value="00/00" class="card_block-infos_inFrontDate" id="dateCardFace" readonly/>
           </div>
         </div>
         <div class="card_block card_block-pile">
@@ -26,17 +27,19 @@
             src="./interactive-card-details-form-main/images/bg-card-back.png"
             alt=""
           />
-          <input type="text" value="000" class="card_block-back"/>
+          <input type="text" value="000" class="card_block-back" id="cvcCardFace"/>
       </section>
       <section class="information">
         <form class="information_block">
           <div class="information_block-infos">
             <label>CARDHOLDER NAME</label>
-            <input type="text" placeholder="e.g Jane Appleseed ">
+            <input type="text" placeholder="e.g Jane Appleseed" id="nameCard">
+            <label class="cvc hidden">Enter your name</label>
           </div>
           <div class="information_block-infos">
             <label>CARD NUMBER</label>
-            <input type="text" placeholder="e.g. 1234 5678 9123 0000">
+            <input type="text" placeholder="e.g. 1234 5678 9123 0000" id="numCard">
+            <label class="cvc adv_ice">Wrong Fromat, numbers only</label>
           </div>
           <div class=" information_block-infos_details">
             <div class="time">
@@ -44,14 +47,17 @@
               <label class="cvc">CVC</label>
             </div>
             <div class="infos_time">
-              <input type="text" class="c_months" placeholder="MM">
-              <input type="text" class="c_years" placeholder="YY">
-              <input type="text" class="c_cvc" placeholder="e.g. 123">
+              <input type="text" class="c_months" placeholder="MM" maxlength=2  id="monthsCard">
+              <input type="text" class="c_years" placeholder="YY" maxlength=2 id="yearsCard">
+              <input type="text" class="c_cvc" placeholder="e.g. 123"  maxlength=3 id="cvcCard">
             </div>
-            
+            <div class="time advice">
+              <label class="date adv_ice">Can't be blank</label>
+              <label class="cvc adv_ice">Can't be blank</label>
+            </div>
           </div>
           <div class="information_block-infos">
-            <button>Confirm</button>
+            <button id="button">Confirm</button>
           </div>
         </form>
       </section>

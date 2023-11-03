@@ -30,7 +30,6 @@ html {
 }
 body {
   font-family: var(--font);
-  /* display: flex; */
 }
 label {
   font-weight: 700;
@@ -38,19 +37,6 @@ label {
   font-size: 1rem;
   letter-spacing: 0.1rem;
 }
-/* input {
-  height: 3.5rem;
-  border-radius: 6px;
-  border: 1px solid var(--verDaV);
-  font-family: var(--font);
-  padding: 2rem 1.5rem 2rem 1.5rem;
-  font-weight: bold;
-  font-size: 1.5rem;
-  outline: none;
-} */
-/* input:focus {
-  border: 0.8px solid rgb(48, 3, 3);
-} */
 .project {
   width: 100%;
   min-height: 200vh;
@@ -101,7 +87,6 @@ svg {
   left: 1.5rem;
   width: 30rem;
   height: 1rem;
-  /* background-color: red; */
   display: flex;
   justify-content: space-between;
 }
@@ -168,6 +153,9 @@ svg {
   gap: 2rem;
   padding-bottom: 0.6rem;
 }
+.information_block-infos_details .advice {
+  padding-top: 0.7rem;
+}
 .information_block-infos_details .infos_time {
   display: flex;
   gap: 1rem;
@@ -203,6 +191,13 @@ div > .c_cvc {
 }
 input:focus {
   border: 0.8px solid rgb(48, 3, 3);
+}
+.adv_ice {
+  color: aliceblue;
+}
+
+.hidden {
+  color: red;
 }
 
 .information_block-infos > button {
