@@ -30,16 +30,16 @@
           <input type="text" value="000" class="card_block-back" id="cvcCardFace"/>
       </section>
       <section class="information">
-        <form class="information_block">
+        <form class="information_block" id="begin">
           <div class="information_block-infos">
             <label>CARDHOLDER NAME</label>
             <input type="text" placeholder="e.g Jane Appleseed" id="nameCard">
-            <label class="cvc hidden">Enter your name</label>
+            <label class="cvc advice_name">Enter your name</label>
           </div>
           <div class="information_block-infos">
             <label>CARD NUMBER</label>
             <input type="text" placeholder="e.g. 1234 5678 9123 0000" id="numCard">
-            <label class="cvc adv_ice">Wrong Fromat, numbers only</label>
+            <label class="cvc advice_num">Wrong Fromat, numbers only</label>
           </div>
           <div class=" information_block-infos_details">
             <div class="time">
@@ -52,14 +52,25 @@
               <input type="text" class="c_cvc" placeholder="e.g. 123"  maxlength=3 id="cvcCard">
             </div>
             <div class="time advice">
-              <label class="date adv_ice">Can't be blank</label>
-              <label class="cvc adv_ice">Can't be blank</label>
+              <label class="date advice_time">Can't be blank</label>
+              <label class="cvc advice_cvc">Can't be blank</label>
             </div>
           </div>
+          <div class="well"><p>Tout Est Bon</p></div>
           <div class="information_block-infos">
             <button id="button">Confirm</button>
           </div>
         </form>
+
+        <div class="add" id="add">
+         <img src="./interactive-card-details-form-main/images/icon-complete.svg" alt="">
+          <h1>THANK YOU</h1>
+          <p>We've added your card details</p>
+          <div class="information_block-infos">
+            <button id="restart">Continuer</button>
+          </div>
+        </div>
+
       </section>
     </div>
   </body>
